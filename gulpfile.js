@@ -95,6 +95,18 @@ export const buildImage = (done) => {
 	done();
 };
 
+
+//Fonts
+
+export const buildFont = () => {
+	return gulp.src('src/fonts/*')
+		.pipe(plumber())
+		.pipe(gulp.dest('dist/fonts'))
+		.pipe(sync.stream({
+			once: true
+		}));
+};
+
 // Paths
 
 export const fixPath = () => {
@@ -116,6 +128,7 @@ export const buildAll = gulp.series(
 		buildHtml,
 		buildJs,
 		buildCss,
+		buildFont,
 		buildImage
 	),
 	fixPath
@@ -139,6 +152,7 @@ export const watch = () => {
 	gulp.watch('src/**/*.html', gulp.series(buildHtml, fixPath));
 	gulp.watch('src/css/*.scss', gulp.series(buildCss));
 	gulp.watch('src/js/**/*.js', gulp.series(buildJs));
+	gulp.watch('src/fonts/*', gulp.series(buildFont));
 	gulp.watch('src/images/**/*', gulp.series(buildImage));
 };
 

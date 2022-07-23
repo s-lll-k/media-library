@@ -1,3 +1,257 @@
-@media (max-widht: 1024px) {
-    
+@media (max-width: 1024px) {
+    .interests {
+        &__inner {
+            .new-string {
+                display: none;
+            }
+        }
+    }
+    .formats {
+        &__inner {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+    }
+    .banners {
+        &__inner {
+            flex-direction: column;
+            align-items: unset;
+        }
+        &__text {
+            max-width: 100%;
+        }
+        &__positions {
+            &.banners__positions_desktop {
+                padding-left: 53px;
+            }
+        }
+    }
+}
+
+@media (max-width: 875px) {
+    .banners {
+        &__inner {
+            padding: 20px 20px 96px;
+            gap: 58px;
+            position: relative;
+            overflow: hidden;
+            &::after{
+                content: '';
+                background-image: url(../images/spot-orange.svg);
+                width: 438px;
+                height: 419px;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: contain;
+                position: absolute;
+                right: -190px;
+                bottom: 160px;
+                filter: blur(80px);
+                z-index: 1;
+                will-change: transform;
+            }
+        }
+        &__wrapper {
+            flex-direction: column;
+            align-items: center;
+            gap: 94px;
+        }
+        &__positions {
+            max-width: 100%;
+            &.banners__positions_desktop {
+                margin-left: unset;
+                padding-left: unset;
+                max-width: calc(100% + 60px);
+                margin-left: -30px;
+                margin-right: -30px;
+                .banners__positions-image {
+                    max-width: 393px;
+                    margin: 0 auto;
+                }
+            }
+            &-name {
+                display: none;
+            }
+            &-image {
+                max-width: 139px;
+                width: 100%;
+                object-fit: contain;
+                object-position: center;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .title {
+        font-size: 32px;
+        &.title_small {
+            font-size: 32px;
+        }
+    }
+    .container {
+        padding: 0 10px;
+    }
+    .advertisers {
+        margin-bottom: 100px;
+        &__box {
+            margin-right: 0;
+            max-width: 100%;
+        }
+        &__inner {
+            padding-top: 43px;
+            flex-direction: column;
+            position: relative;
+            padding-bottom: 120px;
+        }
+        &__image {
+            margin-top: 0;
+        }
+        &__btns {
+            width: 100%;
+            position: absolute;
+            bottom: 0;
+        }
+        &__btn {
+            max-width: 100%;
+        }
+    }
+
+    .audience {
+        margin-bottom: 65px;
+        &__inner {
+            flex-direction: column;
+            gap: 40px;
+        }
+        &__item {
+            &-text {
+                br {
+                    display: none;
+                }
+                span {
+                    font-size: 40px;
+                    line-height: 39px;
+                }
+            }
+        }
+    }
+
+    .interests {
+        padding: 53px 0 68px;
+        .container {
+            &::after {
+                right: -83px;
+                top: 28px;
+                left: unset;
+            }
+        }
+        &__title {
+            max-width: 200px;
+            margin-bottom: 40px;
+        }
+    }
+    .interest {
+        &__percent {
+            font-size: 18px;
+        }
+    }
+
+    .formats {
+        padding: 74px 0 127px;
+        &__title {
+            max-width: 300px;
+        }
+    }
+    .format {
+        &__icon {
+            width: 70px;
+            height: 70px;
+        }
+    }
+
+    .questions {
+        &__inner {
+            padding: 44px 18px;
+        }
+        &__title {
+            margin-bottom: 40px;
+        }
+    }
+}
+
+@media (max-width: 550px) {
+    .advertisers {
+        &__btns {
+            flex-wrap: wrap;   
+            gap: 20px;
+        }
+        &__inner {
+            padding-bottom: 160px;
+        }
+    }
+    .statistics {
+        padding: 60px 0 80px;
+        .container {
+            &::before {
+                display: none;
+            }
+            &::after{
+                width: 341px;
+                height: 326px;
+                bottom: -46px;
+                top: unset;
+                left: unset;
+                right: -139px;
+                filter: blur(60px);
+            }
+        }
+        &__image {
+            width: 100%;
+        }
+        &__girl-image {
+            display: none;
+        }
+        &__kz-image {
+            width: 345px;
+            height: 267px;
+            left: -156px;
+            bottom: 120px;
+            top: unset;
+        }
+    }
+    .interests {
+        &__inner {
+            .interest {
+                width: 100%;
+            }
+        }
+    }
+    .interest {
+        padding: 8px 20px;
+        &__box {
+            display: flex;
+            align-items: center;
+            gap: 3px;
+        }
+        &__percent {
+            min-width: 60px;
+            text-align: left;
+        }
+    }
+
+
+    .formats {
+        &__inner {
+            flex-direction: column;
+            flex-wrap: unset;
+        }
+    }
+    .format {
+        max-width: 100%;
+        flex-direction: row;
+        gap: 20px;
+        &__icon {
+            margin-bottom: 0;
+        }
+    }
 }

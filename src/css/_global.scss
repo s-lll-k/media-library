@@ -13,11 +13,11 @@ html {
 }
 
 body {
-	// font-family: 'Manrope', sans-serif;
+    font-family: 'NeueMachina', sans-serif;
     font-weight: 400;
-    font-size: 16px;
-    line-height: 1.5;
-    // color: $gray;
+    font-size: 18px;
+    line-height: 1.4;
+    color: #555555;
     position: relative;
     background: #FFFFFF;
     &._fixed {
@@ -41,6 +41,7 @@ h6 {
 a {
     display: inline-block;
     text-decoration: none;
+    color: inherit;
 }
 
 p {
@@ -61,17 +62,41 @@ button {
     cursor: pointer;
 }
 
-// .title {
-//     font-family: 'Mulish';
-//     font-weight: 900;
-//     font-size: 32px;
-//     line-height: 1.1;
-//     letter-spacing: 0.01em;
-//     color: $purple;
-//     & > span {
-//         color: $blue;
-//     }
-// }
+.button {
+    font-family: 'Roboto', sans-serif;
+    border: 1px solid #272727;
+    padding: 12px 38px;
+    text-align: center;
+    transition: background-color .3s ease,
+        color .3s ease;
+    &.button_black {
+        background-color: #272727;
+        color: #FFFFFF;
+        &:hover {
+            background-color: #FFF;
+            color: #272727;
+        }
+    }
+    &.button_white {
+        background-color: #FFFFFF;
+        color: #272727;
+        &:hover {
+            background-color: #272727;
+            color: #FFFFFF;
+        }
+    }
+}
+
+.title {
+    font-weight: 800;
+    font-size: 50px;
+    line-height: 1;
+    color: #272727;
+    &.title_small {
+        font-weight: 700;
+        font-size: 40px;
+    }
+}
 
 .wrapper {
     display: flex;
@@ -87,15 +112,9 @@ button {
     flex: 0 0 auto;
 }
 
-// .container {
-//     max-width: 1150px;
-//     width: 100%;
-//     padding: 0 20px;
-//     margin: 0 auto;
-// }
-// .container-fluid {
-//     max-width: 1440px;
-//     width: 100%;
-//     margin: 0 auto;
-// }
-
+.container {
+    max-width: 1150px;
+    width: 100%;
+    padding: 0 20px;
+    margin: 0 auto;
+}
